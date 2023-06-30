@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Counter">
+  <meta property="og:url" content="      ">
+  <meta property="og:image" content="       ">
+  <meta name="description" content="A little counter with increase, decrease and reset buttons.">
+  <meta name="robots" content="index, follow">
+
+  <title>Counter</title>
+
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.jpg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" rel="stylesheet" />
+
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <h1 class="h1 display-1 pb-5">Counter</h1>
+  
+  <div class="col-7 col-sm-4 col-md-5 col-lg-3 bg-dark rounded-7 p-3 p-md-4 d-flex
+    flex-column justify-content-around counter">
+    <div display class="bg-info rounded w-100 mb-3 d-flex justify-content-center align-items-center"></div>
+    <div class="d-flex flex-column">
+      <div class="d-flex flex-row mb-4">
+        <button addButton type="button" class="btn btn-success me-2 fs-1 w-50">+</button>
+        <button minusButton type="button" class="btn btn-danger ms-2 fs-1 w-50">-</button>
+      </div>
+      <button resetButton type="button" class="btn btn-primary fs-1 w-100">RESET</button>
+    </div>
+  </div>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
