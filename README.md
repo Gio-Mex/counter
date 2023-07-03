@@ -13,4 +13,5 @@ A simple counter suitable for any type of counting. In the repository you can fi
     
 To use the counter just connect to the website, no installation is required. </br>
 It is very intuitive to use: to increase the count click on the `+` button, to decrease it instead click on the `-` button. </br>
-The `RESET` button will reset the count to zero.
+The `RESET` button will reset the count to zero. </br></br>
+You can test counter website here https://gio-mex-counter.netlify.app
