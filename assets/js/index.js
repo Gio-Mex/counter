@@ -26,17 +26,17 @@ resetBtn.addEventListener('click', () => {
 
 // Functions
 function increase() {
-    number += 1
+    number += 1;
 }
 
 function decrease() {
-    number -= 1
+    number -= 1;
 }
 
 function reset() {
-    number = 0
+    number = confirm("Do you really want to reset the count?") ? 0 : exit;
 }
 
 function updateDisplay() {
-    display.innerText = number
+    display.innerText = number;
 }
