@@ -1,7 +1,7 @@
 # The Counter
-![Static Badge](https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5&link=https%3A%2F%2Fgithub.com%2FGio-Mex)
-![Static Badge](https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3&logoColor=blue&link=https%3A%2F%2Fgithub.com%2FGio-Mex)
-![Static Badge](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=JavaScript&logoColor=yellow&link=https%3A%2F%2Fgithub.com%2FGio-Mex)
+![Static Badge](https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5)
+![Static Badge](https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3&logoColor=blue)
+![Static Badge](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=JavaScript)
 
 ## Description
 
