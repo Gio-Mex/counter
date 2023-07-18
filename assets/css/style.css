@@ -10,8 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(to bottom, hsla(197, 89%, 72%, 0.523), hsl(209, 99%, 29%));
     font-size: 6rem;
 }
-
