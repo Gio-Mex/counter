@@ -14,3 +14,13 @@ body {
     background: linear-gradient(to bottom, hsla(197, 89%, 72%, 0.523), hsl(209, 99%, 29%));
     font-size: 6rem;
 }
+
+.display {
+    background-color: #54B4D3;
+    border-radius: 0.25rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

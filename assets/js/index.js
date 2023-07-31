@@ -1,38 +1,43 @@
 // Initialization
 const counter = document.querySelector('[counter]')
-counter.insertAdjacentHTML('afterbegin',
-`
-<div display class="bg-info rounded w-100 mb-3 d-flex justify-content-center 
-  align-items-center"></div>
-<div class="d-flex flex-column">
-    <div class="d-flex flex-row mb-4">
-        <button addButton type="button" class="btn btn-success me-2 fs-1 w-50">+</button>
-        <button minusButton type="button" class="btn btn-danger ms-2 fs-1 w-50">-</button>
-    </div>
-    <button resetButton type="button" class="btn btn-primary fs-1 w-100">RESET</button>
-</div>
-`
-)
 
-const display = document.querySelector('[display]')
+const display = document.createElement('div');
+display.className = 'display';
+counter.append(display);
+
+const div = document.createElement('div');
+div.classList.add('d-flex', 'flex-row', 'mb-4');
+counter.append(div);
+
+const addButton = document.createElement('button');
+addButton.classList.add('btn', 'btn-success','me-2', 'fs-1', 'w-50');
+addButton.innerText = '+';
+div.append(addButton);
+
+const minusButton = addButton.cloneNode(true);
+minusButton.classList.remove('btn-success', 'me-2')
+minusButton.classList.add('btn-danger', 'ms-2');
+minusButton.innerText = '-';
+div.append(minusButton);
+
+const resetButton = document.createElement('button')
+resetButton.classList.add('btn', 'btn-primary', 'fs-1', 'w-100');
+resetButton.innerText = 'RESET';
+counter.append(resetButton);
+
 let number = 0
 updateDisplay()
-
-const addBtn = document.querySelector('[addButton]')
-const minusBtn = document.querySelector('[minusButton]')
-const resetBtn = document.querySelector('[resetButton')
-
 
 // Events
 counter.addEventListener('click', function (event) {
   switch (event.target) {
-    case addBtn:
+    case addButton:
       increase();
       break;
-    case minusBtn:
+    case minusButton:
       decrease();
       break;
-    case resetBtn:
+    case resetButton:
       reset();
       break;
   }
@@ -50,7 +55,7 @@ function decrease() {
 }
 
 function reset() {
-  number = confirm("Do you really want to reset the count?") ? 0 : number;
+  number = confirm ("Do you really want to reset the count?") ? 0 : number;
 }
 
 function updateDisplay() {
