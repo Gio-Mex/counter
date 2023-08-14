@@ -1,63 +1,55 @@
 // Initialization
 const counter = document.querySelector('[counter]')
-
-const display = document.createElement('div');
-display.className = 'display';
-counter.append(display);
-
-const div = document.createElement('div');
-div.classList.add('d-flex', 'flex-row', 'mb-4');
-counter.append(div);
-
-const addButton = document.createElement('button');
-addButton.classList.add('btn', 'btn-success','me-2', 'fs-1', 'w-50');
-addButton.innerText = '+';
-div.append(addButton);
-
-const minusButton = addButton.cloneNode(true);
-minusButton.classList.remove('btn-success', 'me-2')
-minusButton.classList.add('btn-danger', 'ms-2');
-minusButton.innerText = '-';
-div.append(minusButton);
-
-const resetButton = document.createElement('button')
-resetButton.classList.add('btn', 'btn-primary', 'fs-1', 'w-100');
-resetButton.innerText = 'RESET';
-counter.append(resetButton);
-
 let number = 0
-updateDisplay()
+const display = newElement('div', 'display', number);
+const div = newElement('div', 'd-flex flex-row flex-wrap', '');
+const addBtn = newElement('button', 'btn btn-success fs-1 me-auto mb-4', '+');
+const minusBtn = newElement('button', 'btn btn-danger fs-1 mb-4', '-');
+const resetBtn = newElement('button', 'btn btn-primary fs-1 w-100', 'RESET');
 
 // Events
 counter.addEventListener('click', function (event) {
   switch (event.target) {
-    case addButton:
+    case addBtn:
       increase();
       break;
-    case minusButton:
+    case minusBtn:
       decrease();
       break;
-    case resetButton:
+    case resetBtn:
       reset();
       break;
   }
   updateDisplay()
-}
-);
+});
 
 // Functions
+function newElement(tagName, styleParameters, text) {
+  element = document.createElement(tagName);
+  element.className = styleParameters;
+  element.innerHTML = text;
+  for (let style of element.classList) {
+    if (style == 'btn') {
+      div.append(element); 
+      return element;
+    } 
+      counter.append(element);
+      return element;
+  }
+};
+
 function increase() {
   number++;
-}
+};
 
 function decrease() {
   number--;
 }
 
 function reset() {
-  number = confirm ("Do you really want to reset the count?") ? 0 : number;
+  number = confirm("Do you really want to reset the count?") ? 0 : number;
 }
 
 function updateDisplay() {
-  display.textContent = number;
+  display.innerHTML = number;
 }
